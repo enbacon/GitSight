@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin+Condensed&display=swap');
+
+
+body {
+  margin: 0 auto;
+  font-family: 'Cabin Condensed', sans-serif;
+}
+
+h1 {
+  padding-top: 4vh;
+  padding-bottom: 1vh;
+}
+
+h5 {
+  padding-bottom: .5vh;
+}
+
+h1, h5 {
+  font-family: 'Cabin Condensed', sans-serif;
+  margin-top: 4vh;
+  text-align: center;
+}
+
+img {
+  max-height: 10vh;
+}

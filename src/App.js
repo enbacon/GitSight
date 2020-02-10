@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import Repos from './Components/Repos'
 import Users from './Components/Users'
 
