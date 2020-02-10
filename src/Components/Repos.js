@@ -4,12 +4,15 @@ import Table from 'react-bootstrap/Table'
 import axios from 'axios'
 import moment from 'moment'
 
+
 const Repos = () => {
   const [topFiveRepos, setTopFiveRepos] = useState([])
 
+  // Formatting date to match required format for search query
   const month = moment().subtract(1, 'months').calendar()
   const date = moment(new Date(month)).format('YYYY-MM-DD')
 
+  // API call with search query for repos created in the last month
   const loadRepos = async () => {
     const response = await axios({
       method: 'GET',
@@ -19,17 +22,18 @@ const Repos = () => {
       }
     })
 
+    // Formatting response data
     const responseArray = response.data.items
     setTopFiveRepos(responseArray.slice(0,5))
-    console.log('this is response array', responseArray)
   }
 
   useEffect(() => {
     loadRepos()
   }, [])
 
+// Table build, button build, populating the table
 return (
-    <div className="mx-5">
+    <div className= "mx-5">
       <h1>Most Starred Repos</h1>
       <Table striped bordered hover>
         <thead>
@@ -43,19 +47,18 @@ return (
         </thead>
         <tbody>
           {topFiveRepos.map((repo, index) => (
-            <tr key={`${repo.id}`}>
-              <td>{index + 1}</td>
-              <td>{repo.id}</td>
-              <td>{repo.name}</td>
-              <td>{repo.description}</td>
-              <td>{repo.stargazers_count}</td>
+            <tr key={ `${repo.id}` }>
+              <td>{ index + 1 }</td>
+              <td>{ repo.id }</td>
+              <td>{ repo.name }</td>
+              <td>{ repo.description }</td>
+              <td>{ repo.stargazers_count }</td>
             </tr>
-
           ))}
-
         </tbody>
       </Table>
-      <Button id="hot_repo" onClick={loadRepos} className="mb-4 mt-1" variant="info">Refresh</Button>
+
+      <Button id="hot_repo" onClick={ loadRepos } className="btn my-1" variant="info">Refresh</Button>
     </div>
   )
 }
