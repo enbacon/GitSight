@@ -24,7 +24,7 @@ const Users = () => {
     .then(users  => addFollowers(users))
     .then(allFiveUsers => setTopFiveUsers(allFiveUsers))
     .catch(console.error)
-    }
+  }
 
   // New API call(s) using user login to recieve number of followers
   // Add number of followers to each user
