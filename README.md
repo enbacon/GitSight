@@ -6,4 +6,13 @@
 ### The second table shows the 5 users who have joined in the last year with the most followers.
 - This table will automatically update every two minutes.
 
+## Getting Started!
+
+```
+git clone git@github.com:enbacon/GitSight.git
+cd GitSight
+npm install
+npm start
+```
+
 #### This application was built by Erin N. Bacon
