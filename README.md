@@ -1,10 +1,18 @@
+# GitSight
+This application interacts with the GitHub API to show some of the most popular repos and users with the most followers.
 
-## This application interacts with the official GitHub API v3 (https://developer.github.com/v3/)
+![Alt text](screenshots/table-1.png?raw=true "Table 1")
+![Alt text](screenshots/table-2.png?raw=true "Table 1")
 
-### The first table shows the top 5 repositories with the most stars in the last month.
+## Features
 
-### The second table shows the 5 users who have joined in the last year with the most followers.
+- The first table shows the top 5 repositories with the most stars in the last month.
+
+- The second table shows the 5 users who have joined in the last year with the most followers.
+
 - This table will automatically update every two minutes.
+
+- This application interacts with the official
 
 ## Getting Started!
 
@@ -14,5 +22,3 @@ cd GitSight
 npm install
 npm start
 ```
-
-#### This application was built by Erin N. Bacon
